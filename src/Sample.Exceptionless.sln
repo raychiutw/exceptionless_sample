@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31402.337
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.Exceptionless.WebApi", "Sample.Exceptionless.WebApi\Sample.Exceptionless.WebApi.csproj", "{0F6307DB-4061-4E0F-863C-E96C5405AB18}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample.Exceptionless.WebApi", "Sample.Exceptionless.WebApi\Sample.Exceptionless.WebApi.csproj", "{0F6307DB-4061-4E0F-863C-E96C5405AB18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.Exceptionless.MVC.NLog", "Sample.Exceptionless.MVC.NLog\Sample.Exceptionless.MVC.NLog.csproj", "{EC3E9BA0-89F9-40D7-BCC4-EFB945585A08}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{0F6307DB-4061-4E0F-863C-E96C5405AB18}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F6307DB-4061-4E0F-863C-E96C5405AB18}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F6307DB-4061-4E0F-863C-E96C5405AB18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC3E9BA0-89F9-40D7-BCC4-EFB945585A08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC3E9BA0-89F9-40D7-BCC4-EFB945585A08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC3E9BA0-89F9-40D7-BCC4-EFB945585A08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC3E9BA0-89F9-40D7-BCC4-EFB945585A08}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
