@@ -33,6 +33,13 @@ namespace Sample.Exceptionless.WebApi.Controllers
             // the logging system in Program.cs.
             this._logger.LogWarning("Test warning message");
 
+            this._logger.LogInformation("log info");
+            this._logger.LogTrace("log trace");
+
+            this._logger.LogWarning("log warning");
+
+            this._logger.LogError("log error");
+
             try
             {
                 throw new Exception($"Handled Exception: {Guid.NewGuid()}");

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using Exceptionless;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Sample.Exceptionless.MVC.NLog.Models;
@@ -20,13 +21,20 @@ namespace Sample.Exceptionless.MVC.NLog.Controllers
             this._logger.LogInformation("log info");
             this._logger.LogTrace("log trace");
 
+            this._logger.LogWarning("log warning");
+
+            this._logger.LogError("log error");
+
             try
             {
-                throw new Exception("發生了未知的異常");
+                var s = 0;
+                var a = 3;
+                var d = a / s;
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, $"{HttpContext.Connection.RemoteIpAddress}呼叫了productapi/product/exceptiontest介面返回了失敗");
+                this._logger.LogError($"{HttpContext.Connection.RemoteIpAddress} 錯誤");
+                ex.ToExceptionless().Submit();
             }
 
             return View();
