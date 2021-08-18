@@ -5,6 +5,7 @@
 ## 安裝套件
 
 Exceptionless.AspNetCore
+
 Exceptionless.Extensions.Logging
 
 ## 新增 appSetting.json 設定
