@@ -13,8 +13,8 @@ Exceptionless.Extensions.Logging
 ```json
 {
   "Exceptionless": {
-    "ApiKey": "7IUdEP6s7gJ66ptDxGF1w3o2E7Po4kVpJc3AQKlS",
-    "ServerUrl": "http://raychiu-pc:8000"
+    "ApiKey": "{key}",
+    "ServerUrl": "{url}"
   }
 }
 ```
@@ -24,8 +24,10 @@ Exceptionless.Extensions.Logging
 設定 Log 寫入 Exception, 請增加 `ConfigureLogging` 區段
 
 ```csharp
+using Exceptionless;
+```
 
-
+```csharp             
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureLogging(logging =>
@@ -42,14 +44,6 @@ Exceptionless.Extensions.Logging
 ## Startup.cs 設定
 
 ```csharp
-        public void ConfigureServices(IServiceCollection services)
-        {
-            services.AddControllersWithViews();
-            services.AddExceptionless();
-
-            // 以下略
-        }
-
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             // 請放在第一行
