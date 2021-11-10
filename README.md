@@ -27,6 +27,15 @@ Exceptionless.Extensions.Logging
 using Exceptionless;
 ```
 
+```csharp
+    .ConfigureLogging(logging =>
+    {
+        logging.AddExceptionless(c => c.SetDefaultMinLogLevel(LogLevel.Info));
+    })
+```
+
+> 完整範例
+
 ```csharp             
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
